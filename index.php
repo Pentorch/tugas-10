@@ -27,7 +27,7 @@
                     <?php 
                     include "koneksi.php";
                     $no = 1;
-                    $data = mysqli_query($koneksi,"select * from produk order by asc");
+                    $data = mysqli_query($koneksi,"select * from produk order by id asc");
                     while ($a = mysqli_fetch_array($data)) {
                     ?>
                     <tr>
