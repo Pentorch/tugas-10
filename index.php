@@ -37,9 +37,9 @@
                         <td><?= $a['harga'] ;?></td>
                         <td><?= $a['jumlah'] ;?></td>
                         <td>
-                            <a href="edit?id=<?= $a['id'] ;?>" class="btn btn-primary"><i class="fa fa-edit"></i></a>
+                            <a href="edit.php?id=<?= $a['id'] ;?>" class="btn btn-primary"><i class="fa fa-edit"></i></a>
                             ||
-                            <a href="hapus?id=<?= $a['id'] ;?>" class="btn btn-danger"><i class="fa fa-trash"></i></a>
+                            <a href="hapus.php?id=<?= $a['id'] ;?>" class="btn btn-danger" onclick="return confirm('Apakah anda yakin ingin menghapus data ini?')"><i class="fa fa-trash"></i></a>
                         </td>
                     </tr>
                 <?php 
