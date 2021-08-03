@@ -1,0 +1,25 @@
+body {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.button {
+  margin-bottom: 20px;
+  margin-top: 20px;
+  float: right;
+}
+
+.font {
+  text-align: center;
+  padding-top: 20px;
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+
+.button1 {
+  float: right;
+  display: block;
+}
+
+.btn.button1 li a {
+  color: white;
+}
