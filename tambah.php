@@ -45,16 +45,24 @@
             </div>
             </div>
             <?php 
-            
             // koneksi database
-            include "koneksi.php";
-            if (isset($_POST['submit'])) {
-                $nama_produk = $_POST['nama_produk'];
-                $keterangan = $_POST['keterangan'];
-                $harga = $_POST['harga'];
-                $jumlah = $_POST['jumlah'];
-            mysqli_query($koneksi, "insert into produk values('','$nama_produk','$keterangan','$harga','$jumlah')");
-            header("location:index.php");
+            include 'koneksi.php';
+            //jika tombol simpan di tekan/klik
+            if(isset($_POST['submit'])){
+                $nama_produk		= $_POST['nama_produk'];
+                $keterangan	        = $_POST['keterangan'];
+                $harga		        = $_POST['harga'];
+                $jumlah		        = $_POST['jumlah'];
+                
+                $sql = mysqli_query($koneksi,"insert into produk values('','$nama_produk','$keterangan','$harga','$jumlah')");
+                
+                if($sql){
+                    echo '<script language="javascript">alert("Data Berhasil Ditambahkan");  
+                    window.location = "index.php";  
+                </script>';
+                }else{
+                    echo '<div class="alert alert-warning">Gagal melakukan proses data.</div>';
+                }
             }
             ?>
         </form>
